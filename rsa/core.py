@@ -39,7 +39,7 @@ class RSA:
   @staticmethod
   def _find_e(phi):
     candidates = []
-    for e in range(2, phi - 1):
+    for e in range(2, phi):
       if gcd(e, phi) == 1:
         candidates.append(e)
     return random.choice(candidates)
